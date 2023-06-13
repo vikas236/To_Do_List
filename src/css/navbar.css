@@ -1,0 +1,174 @@
+/* Navbar styling */
+
+nav, nav .left, nav .right {
+    width: 100vw;
+    height: 45px;
+    background: #DB4C3F;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-around;
+}
+
+/* Styling left side of navbar  */
+
+/* Hamburger for sidebar */
+nav .hamburger {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+nav .hamburger:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+nav .left .ham, .ham::before, .ham::after {
+    width: 15px;
+    height: 2px;
+    background: white;
+    border-radius: 10px;
+}
+
+.ham {
+    margin: 14px 8px;
+}
+
+.ham::before, .ham::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+}
+
+.ham::before {
+    top: 9px;
+}
+
+.ham::after {
+    bottom: 9px;
+}
+
+/* Home button and search icon */
+nav .left .home, nav .left .mag_glass {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+nav .left .home:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+nav .left path {
+    fill: white;
+}
+
+.mag_glass {
+    position: absolute;
+    left: 10px;
+}
+
+/* Search bar in nav */
+nav .search {
+    position: relative;
+}
+
+nav .left input{
+    width: 200px;
+    height: 28px;
+    background: #E27065;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding-left: 30px;
+    transition: .4s;
+}
+
+nav .left input:hover {
+    background: white;
+    color: black;
+}
+
+nav .left input::placeholder {
+    color: white;
+}
+
+nav .left input:focus{
+    border: none;
+    outline: none;
+    width: 350px;
+    background: white;
+    color: rgba(0, 0, 0, .4);
+}
+
+
+/* Styling right side of navbar */
+
+nav .right {
+    width: 275px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 35px;
+}
+
+nav .right .upgrade {
+    background: #E27065;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Star symbol in upgrde box */
+nav .right .upgrade svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+nav .right .upgrade path {
+    fill: #FFD093;
+}
+
+nav .right .upgrade span {
+    color: white;
+    font-size: 12px;
+}
+
+/* Plus icon */
+nav .right svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav .right svg:hover {
+    background: #E27065;
+}
+
+nav .right path {
+    fill: white;
+}
+
+/* Help icon */
+nav .right .help {
+    padding: 2px;
+}
+
+/* Notification icon */
+nav .right .notification {
+    padding: 2px;
+}

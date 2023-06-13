@@ -5,9 +5,6 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     devtool: 'inline-source-map',
-    // stats: {
-    //     children: true,
-    // },
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
