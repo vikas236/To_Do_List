@@ -3,7 +3,7 @@
 nav, nav .left, nav .right {
     width: 100vw;
     height: 45px;
-    background: #DB4C3F;
+    background: #282828;
     display: flex;
     align-items: center;
 }
@@ -33,7 +33,7 @@ nav .left .ham, .ham::before, .ham::after {
     width: 15px;
     height: 2px;
     background: white;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 .ham {
@@ -75,6 +75,7 @@ nav .left path {
 .mag_glass {
     position: absolute;
     left: 10px;
+    top: -1px;
 }
 
 /* Search bar in nav */
@@ -85,18 +86,19 @@ nav .search {
 nav .left input{
     width: 200px;
     height: 28px;
-    background: #E27065;
+    background: rgba(116, 116, 116, .3);
     border: none;
     outline: none;
     border-radius: 3px;
     margin-left: 10px;
     padding-left: 30px;
+    padding-top: 2px;
     transition: .4s;
 }
 
 nav .left input:hover {
     background: white;
-    color: black;
+    color: rgba(0, 0, 0, .4);
 }
 
 nav .left input::placeholder {
@@ -122,12 +124,22 @@ nav .right {
 }
 
 nav .right .upgrade {
-    background: #E27065;
+    background: rgba(116, 116, 116, .3);
     padding: 5px;
     display: flex;
     align-items: center;
     border-radius: 5px;
     cursor: pointer;
+    transition: .2s;
+}
+
+.upgrade_pro, .upgrade .hover_title {
+    display: flex;
+    align-items: center;
+}
+
+nav .right .upgrade:hover {
+    background: rgba(116, 116, 116, 1);
 }
 
 /* Star symbol in upgrde box */
@@ -147,6 +159,28 @@ nav .right .upgrade span {
     font-size: 12px;
 }
 
+.right .upgrade .hover_text {
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    background: #282828;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.right .upgrade:hover .hover_text {
+    display: block;
+}
+
+.right .upgrade .hover_text img {
+    width: 25px;
+    height: 25px;
+}
+
+
 /* Plus icon */
 nav .right svg {
     width: 30px;
@@ -155,8 +189,8 @@ nav .right svg {
     cursor: pointer;
 }
 
-nav .right svg:hover {
-    background: #E27065;
+nav .right > svg:hover {
+    background: rgba(116, 116, 116, .3);
 }
 
 nav .right path {
