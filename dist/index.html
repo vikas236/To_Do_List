@@ -6,62 +6,158 @@
   <title>To Do List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="#">
+</head>
 
 <body>
   <nav>
-    <div class="left">
-      <div class="hamburger">
-        <div class="ham"></div>
-      </div>
-      <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
-        <path
-          d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z" />
-      </svg>
-      <div class="search">
-        <svg class="mag_glass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <title>magnify</title>
-          <path
-            d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-        </svg>
-        <input type="text" placeholder="Search">
-      </div>
-    </div>
-    <div class="right">
-      <div class="upgrade">
-        <div class="upgrade_pro">
-          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-              d="M12,2.5L8.42,8.06L2,9.74L6.2,14.88L5.82,21.5L12,19.09L18.18,21.5L17.8,14.88L22,9.74L15.58,8.06L12,2.5M9.38,10.5C10,10.5 10.5,11 10.5,11.63A1.12,1.12 0 0,1 9.38,12.75C8.75,12.75 8.25,12.25 8.25,11.63C8.25,11 8.75,10.5 9.38,10.5M14.63,10.5C15.25,10.5 15.75,11 15.75,11.63A1.12,1.12 0 0,1 14.63,12.75C14,12.75 13.5,12.25 13.5,11.63C13.5,11 14,10.5 14.63,10.5M9,15H15C14.5,16.21 13.31,17 12,17C10.69,17 9.5,16.21 9,15Z" />
-          </svg>
-          <span>Upgrade to Pro</span>
+    <div class="nav">
+      <div class="left">
+        <!-- hamburger menu button -->
+        <div class="hamburger">
+          <div class="ham"></div>
         </div>
-        <div class="hover_text">
-          <div class="hover_title">
+        <!-- home button -->
+        <svg class="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+          <path
+            d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z" />
+        </svg>
+        <!-- search box -->
+        <div class="search">
+          <svg class="mag_glass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>magnify</title>
+            <path
+              d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+          </svg>
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+      <!-- right section of navbar -->
+      <div class="right">
+        <!-- upgrade button -->
+        <div class="upgrade">
+          <div class="upgrade_pro">
             <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M12,2.5L8.42,8.06L2,9.74L6.2,14.88L5.82,21.5L12,19.09L18.18,21.5L17.8,14.88L22,9.74L15.58,8.06L12,2.5M9.38,10.5C10,10.5 10.5,11 10.5,11.63A1.12,1.12 0 0,1 9.38,12.75C8.75,12.75 8.25,12.25 8.25,11.63C8.25,11 8.75,10.5 9.38,10.5M14.63,10.5C15.25,10.5 15.75,11 15.75,11.63A1.12,1.12 0 0,1 14.63,12.75C14,12.75 13.5,12.25 13.5,11.63C13.5,11 14,10.5 14.63,10.5M9,15H15C14.5,16.21 13.31,17 12,17C10.69,17 9.5,16.21 9,15Z" />
             </svg>
             <span>Upgrade to Pro</span>
           </div>
-          <p>Power up your productivity with Pro features, like reminders, extra projects, and more.</p>
+          <!-- upgrade hover box -->
+          <div class="hover_text">
+            <div class="hover_title">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12,2.5L8.42,8.06L2,9.74L6.2,14.88L5.82,21.5L12,19.09L18.18,21.5L17.8,14.88L22,9.74L15.58,8.06L12,2.5M9.38,10.5C10,10.5 10.5,11 10.5,11.63A1.12,1.12 0 0,1 9.38,12.75C8.75,12.75 8.25,12.25 8.25,11.63C8.25,11 8.75,10.5 9.38,10.5M14.63,10.5C15.25,10.5 15.75,11 15.75,11.63A1.12,1.12 0 0,1 14.63,12.75C14,12.75 13.5,12.25 13.5,11.63C13.5,11 14,10.5 14.63,10.5M9,15H15C14.5,16.21 13.31,17 12,17C10.69,17 9.5,16.21 9,15Z" />
+              </svg>
+              <span>Upgrade to Pro</span>
+            </div>
+            <p>Power up your productivity with Pro features, like reminders, extra projects, and more.</p>
+          </div>
         </div>
+        <!-- add task plus button -->
+        <svg class="plus add_task" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>Add Task</title>
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+        </svg>
+        <!-- support button -->
+        <svg class="help" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>Support</title>
+          <path
+            d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" />
+        </svg>
+        <!-- notification button -->
+        <svg class="notificatoin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>Notifications</title>
+          <path
+            d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" />
+        </svg>
       </div>
-      <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <title>Add Task</title>
-        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
-      </svg>
-      <svg class="help" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <title>Support</title>
-        <path
-          d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" />
-      </svg>
-      <svg class="notificatoin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <title>Notifications</title>
-        <path
-          d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" />
-      </svg>
     </div>
   </nav>
+  <!-- main content -->
+  <main>
+    <!-- sidebar -->
+    <div class="sidebar active">
+      <div class="projects_title section">
+        <span>List</span>
+        <svg class="add_project" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+        </svg>
+      </div>
+      <div class="project_list">
+      </div>
+    </div>
+
+    <!-- Main content Inbox -->
+    <div class="tasks">
+      <h2 class="project_name">Home</h2>
+      <div class="add_task">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path>
+        </svg>
+        <span>Add task</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- New Task Details -->
+  <div class="new_task">
+    <input class="task_name" type="text" placeholder="Task name">
+    <textarea class="task_description" type="text" placeholder="Description"></textarea>
+    <div class="btns">
+      <input class="task_due" type="date" placeholder="due date">
+      <select class="task_priority" name="priority">
+        <option value="high">high</option>
+        <option value="normal">normal</option>
+        <option value="low">low</option>
+      </select>
+    </div>
+    <hr>
+    <div class="confirm_btns">
+      <button class="cancel_task">Cancel</button>
+      <button class="confirm_task">Add Task</button>
+    </div>
+  </div>
+  <div class="wall"></div>
+
+  <!-- upgrade plans -->
+  <div class="upgrade_plans">
+    <div class="left">
+      <h3>Upgrade to Pro</h3>
+      <p>Power up your productivity with pro features, like remainders, extra projects and more</p>
+      <h4>Billing cycle</h4>
+      <input class="plan_type" id="yearly_plan" name="plan_type" type="radio">
+      <label class="plan_label" for="yearly_plan">
+        <span class="time brighten">Yearly</span>
+        <span class="pricing brighten">₹4</span>
+        <span>/month</span>
+      </label>
+      <input class="plan_type" id="monthly_plan" name="plan_type" type="radio">
+      <label class="plan_label" for="monthly_plan">
+        <span class="time brighten">Monthly</span>
+        <span class="pricing brighten">₹5</span>
+        <span>/month</span>
+      </label>
+      <span class="final_remainder">You'll be charged <b>₹48 per month</b></span>
+      <p>Applicable taxes will be calculated at checkout.</p>
+      <button class="checkout">Continue to checkout</button>
+    </div>
+    <div class="right">
+      <img class="panda_icon" src="./images/panda.png" alt="panda">
+      <h4>Get more with the Pro plan</h4>
+      <ul class="pro_adv">
+        <li>Reminders</li>
+        <li>300 projects</li>
+        <li>25 guests per project</li>
+        <li>100 MB file uploads</li>
+        <li>150 filters</li>
+        <li>Unlimited activity history</li>
+        <li>Themes & auto backups</li>
+      </ul>
+      <a class="learn_more" href="#">Learn more</a>
+    </div>
+  </div>
+  <div class="dim"></div>
 
   <script src="main.js"></script>
 </body>

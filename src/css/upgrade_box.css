@@ -1,0 +1,173 @@
+/* Upgrade plans box display */
+.upgrade_plans,
+.upgrade_plans .left,
+.upgrade_plans .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.upgrade_plans {
+    width: 750px;
+    height: 550px;
+    position: absolute;
+    background: linear-gradient(90deg, white 0%, white 60%, #FFFAF4 60%);
+    left: 600px;
+    top: 150px;
+    border-radius: 10px;
+    flex-direction: row;
+    overflow: hidden;
+    padding: 20px;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.upgrade_plans.active {
+    display: flex;
+}
+
+.upgrade_plans .left {
+    width: 450px;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.upgrade_plans #yearly_plan,
+.upgrade_plans #monthly_plan {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+.upgrade_plans .plan_label {
+    width: 400px;
+    height: 75px;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+    position: relative;
+}
+
+.plan_label:nth-of-type(2) {
+    margin-top: 10px;
+}
+
+.upgrade_plans .plan_type:checked+.plan_label {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.upgrade_plans .plan_type:checked+.plan_label .brighten {
+    color: black;
+}
+
+.plan_label .time {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label::before,
+label::after {
+    content: "";
+    background: rgba(0, 0, 0, .5);
+    display: inline-block;
+    position: absolute;
+}
+
+.plan_type:checked+label::before {
+    width: 2px;
+    height: 8px;
+    transform: rotate(-45deg);
+    left: 357px;
+    top: 35px;
+}
+
+.plan_type:checked+label::after {
+    width: 2px;
+    height: 16px;
+    transform: rotate(45deg);
+    left: 365px;
+    top: 27px;
+}
+
+.upgrade_plans p {
+    color: rgba(0, 0, 0, .5);
+}
+
+.upgrade_plans .final_remainder {
+    font-size: 12px;
+    margin-top: 50px;
+}
+
+.upgrade_plans .final_remainder+p {
+    font-size: 12px;
+}
+
+.upgrade_plans .checkout {
+    width: 400px;
+    height: 32px;
+    background: rgba(18, 18, 18, .9);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.upgrade_plans .checkout:hover {
+    background: #121212;
+}
+
+/* upgrade plan box right side */
+.upgrade_plans .right {
+    padding: 25px;
+}
+
+.upgrade_plans .right svg {
+    width: 150px;
+    height: 150px;
+    background: #FFFAF4;
+    color: black;
+    margin-left: 25px;
+}
+
+.upgrade_plans .right img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-top: -10px;
+}
+
+.upgrade_plans .right .pro_adv {
+    list-style: none;
+    padding: 0;
+    margin-top: -10px;
+}
+
+.upgrade_plans .right li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.upgrade_plans .right .pro_adv li::before {
+    content: '✓';
+    margin-right: 10px;
+    color: #0C860C;
+}
+
+.upgrade_plans .right .learn_more {
+    color: rgba(0, 0, 0, .6);
+    font-size: 14px;
+    margin-top: -15px;
+}
+
+.upgrade_plans .right .learn_more::before {
+    content: "ⓘ";
+    color: rgba(0, 0, 0, .6);
+    font-size: 14px;
+    margin-right: 10px;
+    text-decoration: none;
+}

@@ -1,30 +1,21 @@
+// css files
 import './style.css';
 import './css/navbar.css';
-
-// import images 
-import msgs_icon from './icons/messages.png'
-
-
-// Calling html elements
-const body = document.querySelector("body");
-const search = document.querySelector(".search");
-const mag_glass = document.querySelector(".mag_glass");
-const search_box = search.childNodes[3];
-const message_icon = document.querySelector(".message_icon");
+import './css/tasks.css';
+import './css/upgrade_box.css';
+import './css/sidebar.css';
 
 
-message_icon.src = msgs_icon;
+// javascript files
+import * as navbar from './javascript/navbar';
+import * as sidebar from './javascript/sidebar';
+import * as tasks from './javascript/tasks';
 
-search_box.addEventListener("mouseover", function() {
-    (mag_glass.childNodes[3]).style.fill = "rgba(0, 0, 0, .4)";
-})
-search_box.addEventListener("mouseout", function() {
-    if (document.activeElement != search_box) { (mag_glass.childNodes[3]).style.fill = "white"; };
-})
 
-search_box.addEventListener("focus", function() {
-    (mag_glass.childNodes[3]).style.fill = "rgba(0, 0, 0, .4)";
-})
-search_box.addEventListener("blur", function() {
-    (mag_glass.childNodes[3]).style.fill = "white";
-})
+// import images and icons
+import panda from "./images/panda.png";
+
+navbar.search_colors;
+
+
+const panda_icon = document.querySelector(".panda_icon");

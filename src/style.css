@@ -6,3 +6,17 @@
 body {
     margin: 0;
 }
+
+.dim {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: fixed;
+    inset: 0px;
+    transition: .2;
+}
+
+.dim.active {
+    display: block;
+}

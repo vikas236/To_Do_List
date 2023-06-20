@@ -1,6 +1,10 @@
-/* Navbar styling */
+/* .Navbar styling */
 
-nav, nav .left, nav .right {
+nav {
+    position: fixed;
+}
+
+.nav, .nav .left, .nav .right {
     width: 100vw;
     height: 45px;
     background: #282828;
@@ -8,14 +12,14 @@ nav, nav .left, nav .right {
     align-items: center;
 }
 
-nav {
+.nav {
     justify-content: space-around;
 }
 
-/* Styling left side of navbar  */
+/* Styling left side of .navbar  */
 
 /* Hamburger for sidebar */
-nav .hamburger {
+.nav .hamburger {
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -25,13 +29,13 @@ nav .hamburger {
     cursor: pointer;
 }
 
-nav .hamburger:hover {
+.nav .hamburger:hover {
     background: rgba(255, 255, 255, .3);
 }
 
-nav .left .ham, .ham::before, .ham::after {
+.nav .left .ham, .ham::before, .ham::after {
     width: 15px;
-    height: 2px;
+    height: 1px;
     background: white;
     border-radius: 25px;
 }
@@ -51,11 +55,11 @@ nav .left .ham, .ham::before, .ham::after {
 }
 
 .ham::after {
-    bottom: 9px;
+    bottom: 10px;
 }
 
 /* Home button and search icon */
-nav .left .home, nav .left .mag_glass {
+.nav .left .home, .nav .left .mag_glass {
     width: 30px;
     height: 30px;
     padding: 5px;
@@ -64,11 +68,11 @@ nav .left .home, nav .left .mag_glass {
     cursor: pointer;
 }
 
-nav .left .home:hover {
+.nav .left .home:hover {
     background: rgba(255, 255, 255, .3);
 }
 
-nav .left path {
+.nav .left path {
     fill: white;
 }
 
@@ -78,12 +82,12 @@ nav .left path {
     top: -1px;
 }
 
-/* Search bar in nav */
-nav .search {
+/* Search bar in .nav */
+.nav .search {
     position: relative;
 }
 
-nav .left input{
+.nav .left input{
     width: 200px;
     height: 28px;
     background: rgba(116, 116, 116, .3);
@@ -96,16 +100,16 @@ nav .left input{
     transition: .4s;
 }
 
-nav .left input:hover {
+.nav .left input:hover {
     background: white;
     color: rgba(0, 0, 0, .4);
 }
 
-nav .left input::placeholder {
+.nav .left input::placeholder {
     color: white;
 }
 
-nav .left input:focus{
+.nav .left input:focus{
     border: none;
     outline: none;
     width: 350px;
@@ -114,16 +118,16 @@ nav .left input:focus{
 }
 
 
-/* Styling right side of navbar */
+/* Styling right side of .navbar */
 
-nav .right {
+.nav .right {
     width: 275px;
     display: flex;
     justify-content: space-around;
     margin-right: 35px;
 }
 
-nav .right .upgrade {
+.nav .right .upgrade {
     background: rgba(116, 116, 116, .3);
     padding: 5px;
     display: flex;
@@ -138,23 +142,23 @@ nav .right .upgrade {
     align-items: center;
 }
 
-nav .right .upgrade:hover {
+.nav .right .upgrade:hover {
     background: rgba(116, 116, 116, 1);
 }
 
 /* Star symbol in upgrde box */
-nav .right .upgrade svg {
+.nav .right .upgrade svg {
     width: 20px;
     height: 20px;
     margin-right: 5px;
     cursor: pointer;
 }
 
-nav .right .upgrade path {
+.nav .right .upgrade path {
     fill: #FFD093;
 }
 
-nav .right .upgrade span {
+.nav .right .upgrade span {
     color: white;
     font-size: 12px;
 }
@@ -175,34 +179,29 @@ nav .right .upgrade span {
     display: block;
 }
 
-.right .upgrade .hover_text img {
-    width: 25px;
-    height: 25px;
-}
-
 
 /* Plus icon */
-nav .right svg {
+.nav .right svg {
     width: 30px;
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-nav .right > svg:hover {
+.nav .right > svg:hover {
     background: rgba(116, 116, 116, .3);
 }
 
-nav .right path {
+.nav .right path {
     fill: white;
 }
 
 /* Help icon */
-nav .right .help {
+.nav .right .help {
     padding: 2px;
 }
 
 /* Notification icon */
-nav .right .notification {
+.nav .right .notification {
     padding: 2px;
 }

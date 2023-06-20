@@ -1,0 +1,138 @@
+/* Task title and List */
+.tasks {
+    width: 850px;
+    height: 750px;
+    position: relative;
+    inset: 100px 700px;
+    padding: 25px;
+}
+
+.tasks .add_task {
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.add_task:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+.add_task span {
+    margin-top: 3px;
+}
+
+/* Add new task */
+.new_task {
+    height: 0;
+    width: 500px;
+    opacity: 0;
+    transform: scale(.3) translateY(1250px);
+    position: absolute;
+    inset: 200px 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px -19px rgba(0,0,0,0.75);
+    transition: .3s;
+    z-index: 1;
+}
+
+.new_task.active {
+    height: 250px;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+input.task_name {
+    border: none;
+    font-size: 24px;
+    outline: none;
+}
+
+textarea.task_description {
+    height: 100px;
+    outline: none;
+    border: none;
+    margin-left: 5px;
+    margin-top: 5px;
+    resize: none;
+    font-size: 14px;
+}
+
+.new_task .btns {
+    display: flex;
+    margin-top: 25px;
+    width: 200px;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.task_due, .task_priority {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .3)
+}
+
+.task_priority {
+    background: white;
+}
+
+.task_due:hover, .task_priority:hover {
+    background: rgba(0, 0, 0, .05);
+    cursor: pointer;
+}
+
+.new_task .confirm_btns {
+    display: flex;
+    justify-content: right;
+}
+
+.cancel_task, .confirm_task {
+    width: 75px;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm_task {
+    background:rgba(0, 0, 0, .3);
+    color: white;
+}
+
+.confirm_task.active {
+    background: rgba(0, 0, 0, .8);
+}
+
+.confirm_task.active:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.new_task hr {
+    width: 500px;
+    color: rgba(0, 0, 0, .3);
+    margin-left: -15px;
+}
+
+.confirm_task {
+    margin: 0;
+}
+
+.wall {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+.wall.active {
+    display: block;
+}
