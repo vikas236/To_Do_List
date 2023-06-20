@@ -37,4 +37,5 @@ for (let i = 0; i < add_task.length; i++) {
 };
 cancel.addEventListener("click", el.close);
 wall.addEventListener("click", el.close);
+
 el.valid_task();
