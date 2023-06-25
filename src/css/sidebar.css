@@ -20,7 +20,7 @@
     transform: translateX(0px);
 }
 
-.sidebar .project:hover, .project.active {
+.sidebar .project:hover, .project.active_project {
     background: #EEEEEE;
     cursor: pointer;
 }

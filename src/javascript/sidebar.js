@@ -13,7 +13,7 @@ const add_project = document.querySelector(".add_project");
 
 const el = (() => {
     const default_list = () => {
-        list.innerHTML = `<span class="default_project project active">Home
+        list.innerHTML = `<span class="default_project project active_project">Home
                         <img class="house_icon" src="./images/house.png" alt="house">
                         </span>`
     }

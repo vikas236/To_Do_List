@@ -15,7 +15,6 @@ import * as tasks from './javascript/tasks';
 // import images and icons
 import panda from "./images/panda.png";
 
-navbar.search_colors;
 
 
-const panda_icon = document.querySelector(".panda_icon");
+const add_project = document.querySelector(".add_project");
